@@ -1,0 +1,27 @@
+{
+  "files": {
+    "main.css": "/movie-pro/static/css/main.728db5a0.chunk.css",
+    "main.js": "/movie-pro/static/js/main.0b674c54.chunk.js",
+    "main.js.map": "/movie-pro/static/js/main.0b674c54.chunk.js.map",
+    "runtime-main.js": "/movie-pro/static/js/runtime-main.f0dc224f.js",
+    "runtime-main.js.map": "/movie-pro/static/js/runtime-main.f0dc224f.js.map",
+    "static/js/2.a26729b8.chunk.js": "/movie-pro/static/js/2.a26729b8.chunk.js",
+    "static/js/2.a26729b8.chunk.js.map": "/movie-pro/static/js/2.a26729b8.chunk.js.map",
+    "static/js/3.16c9941b.chunk.js": "/movie-pro/static/js/3.16c9941b.chunk.js",
+    "static/js/3.16c9941b.chunk.js.map": "/movie-pro/static/js/3.16c9941b.chunk.js.map",
+    "index.html": "/movie-pro/index.html",
+    "static/css/main.728db5a0.chunk.css.map": "/movie-pro/static/css/main.728db5a0.chunk.css.map",
+    "static/js/2.a26729b8.chunk.js.LICENSE.txt": "/movie-pro/static/js/2.a26729b8.chunk.js.LICENSE.txt",
+    "static/media/HobbsShaw.4e76750d.jpeg": "/movie-pro/static/media/HobbsShaw.4e76750d.jpeg",
+    "static/media/bad boys.470aa2a5.jpeg": "/movie-pro/static/media/bad boys.470aa2a5.jpeg",
+    "static/media/black panther.1f324c99.jpeg": "/movie-pro/static/media/black panther.1f324c99.jpeg",
+    "static/media/creed.bfe47502.jpg": "/movie-pro/static/media/creed.bfe47502.jpg",
+    "static/media/logo.2bc164c1.png": "/movie-pro/static/media/logo.2bc164c1.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.f0dc224f.js",
+    "static/js/2.a26729b8.chunk.js",
+    "static/css/main.728db5a0.chunk.css",
+    "static/js/main.0b674c54.chunk.js"
+  ]
+}
