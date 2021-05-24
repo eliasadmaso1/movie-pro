@@ -1,0 +1,49 @@
+button{
+    font-size: 15px;
+    border-bottom: solid 1px white;
+    border-radius: 50px;
+   
+    
+}
+
+.card{
+    border-top: solid 1px white;
+    border-radius: 15px;
+   
+    background-color: black;
+    color: white;
+    transition: 2s;
+    margin: 10px;
+  }
+
+  .card img{
+      width: 250px;
+      transition: 2s;
+  }
+  .card img:hover{
+      opacity: 0.5;
+
+  }
+
+
+ 
+
+  h3{
+      transition: 2s;
+  }
+  h3:hover{
+      color: gray;
+  }
+
+  h4{
+      transition: 2s;
+  }
+
+  h4:hover{
+      color: gray;
+  }
+
+ 
+
+  
+  
