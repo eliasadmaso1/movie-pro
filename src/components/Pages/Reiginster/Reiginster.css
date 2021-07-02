@@ -1,0 +1,16 @@
+input {
+  margin: 5px;
+}
+.regDiv {
+  color: white;
+}
+form {
+  width: 42%;
+  border: solid 2px white;
+  border-radius: 32px;
+  background: black;
+  padding: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

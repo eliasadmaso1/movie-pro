@@ -1,20 +1,23 @@
-import './Header.css';
-import logo from '../../../assets/logo.png'
+import "./Header.css";
+import { Link } from "react-router-dom";
 
-export default function Header(props){
-    return(
-        <div className = "headerDiv">
-        <img src={logo} alt="logo" width="150"/>
-        <input type="text" name="search" placeholder="Search.."/>
-        <ul className="header-ul">
-        <li className="header-li">{props.l1}</li>
-        <li className="header-li">{props.l2}</li>
-        <li className="header-li">{props.l3}</li>
-        <li className="header-li">{props.l4}</li>
-        </ul>
-
-
-
-        </div>
-    )
+export default function Header() {
+  return (
+    <div className="topnav1">
+      <ul>
+        <li className="active1">
+          <Link to="Treilers">Treilers</Link>
+        </li>
+        <li className="active1">
+          <Link to="/Series">Series</Link>
+        </li>
+        <li className="active1">
+          <Link to="/Reality">Reality</Link>
+        </li>
+        <li className="active1">
+          <Link to="/Sport">Sport</Link>
+        </li>
+      </ul>
+    </div>
+  );
 }

@@ -1,13 +1,16 @@
-import Button from '../Button/Button';
-import './Card.css';
+import Button from "../Button/Button";
+import "./Card.css";
 
+export default function Cards(props) {
+  const { click, img, name } = props;
 
-export default function Cards(props){
-    return(<div className="card">
-        <Button name="to movie"/>
-  
-        <h3>Movie Name:{props.name}</h3>
-        <h4>Category :{props.category}</h4>
-        <img src={props.img} alt={props.alt} width="450"/>
-    </div>)
+  return (
+    <div className="card">
+      <Button name="to movie" link={click} />
+
+      <h3>Movie Name:{name}</h3>
+
+      <img src={img} width="350" />
+    </div>
+  );
 }

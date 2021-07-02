@@ -8,12 +8,17 @@ button{
 
 .card{
     border-top: solid 1px white;
-    border-radius: 15px;
-   
+  
     background-color: black;
     color: white;
     transition: 2s;
-    margin: 10px;
+    margin: 20px;
+    display: flex;
+    width: 20%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
   }
 
   .card img{

@@ -1,12 +1,16 @@
-import './Button.css';
+import Button from '@material-ui/core/Button';
 
 
-export default function Button(props){
+export default function Button1(props){
     
-  
+       const {link} = props;
+
+     
+
+
  
         return(
-        <button >{props.name}</button>
+            <a href={link}><Button variant="outlined" color="primary">click</Button></a>
         )
     }
 

@@ -1,35 +1,30 @@
-.topnav1 {
+.topnav {
   overflow: hidden;
   display: flex;
   justify-content: center;
   justify-content: space-around;
-  align-items: center;
-  background-color: #696969;
-  margin-left: 30%;
-  margin-right: 30%;
-  margin-top: 2%;
-  margin-bottom: 2%;
+  border-radius: 70px;
   border: solid 2px white;
-  border-radius: 15px;
-  height: 55px;
 }
 
-.topnav1 li.active1 {
+.topnav li.active {
   float: left;
+  color: #f2f2f2;
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
   font-size: 17px;
+  color: black;
   list-style-type: none;
   transition: 2s;
 }
 
 a {
-  color: black;
+  color: white;
   font-size: 23px;
   transition: 2s;
   text-decoration: none;
 }
 a:hover {
-  color: yellow;
+  color: black;
 }
