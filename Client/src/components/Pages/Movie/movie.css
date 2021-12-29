@@ -1,0 +1,34 @@
+.movie-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-left: 25px;
+    margin-right: 25px;
+}
+
+body{
+    font-family: Optima, sans-serif;
+}
+
+a{
+    text-decoration: none;
+    color: grey;
+}
+
+.manage-list{
+    margin-top: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.manage-list button{
+    font-size: 20px;
+    width: 105px;
+    padding: 5px;
+    background: black;
+    color: white;
+    border-radius: 9px;
+    margin: 10px;
+}
