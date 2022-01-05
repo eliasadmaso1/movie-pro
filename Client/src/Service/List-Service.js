@@ -1,4 +1,3 @@
-
 const getList = async(req,res)=>{
     try {
         return fetch(`http://localhost:3000/movies/List`).then((res) => res.json());
@@ -8,10 +7,10 @@ const getList = async(req,res)=>{
       }
 }
 
-const addToList = async(name,summary,image,genres,url)=>{
+const addToList = async(name,image,genres,movieId)=>{
     const options = {
         method: "POST",
-        body: JSON.stringify({name,summary,image,genres,url}),
+        body: JSON.stringify({name,image,genres,movieId}),
         headers: { "Content-Type": "application/json" },
       };
     try {
@@ -21,4 +20,20 @@ const addToList = async(name,summary,image,genres,url)=>{
       }
 }
 
-export {getList,addToList};
+const deleteFromList = async(movieId)=>{
+  const options = {
+    method: "DELETE",
+    body: JSON.stringify({movieId}),
+    headers: { "Content-Type": "application/json" },
+  };
+try {
+    return fetch(`http://localhost:3000/movies/List`,options);
+  } catch (error) {
+    console.log(error);
+  }
+}
+
+
+
+
+export {getList,addToList,deleteFromList};

@@ -1,31 +1,33 @@
 import React from 'react';
-import { Grid } from "@material-ui/core";
-import CardComponent from "../../Featurs/Cards/Cards";
 import {getList} from '../../../Service/List-Service';
 import {useState,useEffect} from 'react';
+import './Favorites.css';
+import {Link} from 'react-router-dom';
 
 function Favorites() {
 
   const [list,SetList] = useState([]);
 
-  // useEffect(()=>{
-  //   getList().then((res)=>{
-  //     SetList(res);
+  useEffect(()=>{
+    getList().then((res)=>{
+      SetList(res);
 
-  //   })
+    })
 
-  // },[])
+  },[])
 
     
     return (
         <main style={{ marginTop: "85px" }}>
-        <Grid container spacing={15}>
-          {list.map((favor) => (
-            <Grid item md={3}>
-              <CardComponent name={favor.name} />
-            </Grid>
-          ))}
-        </Grid>
+        {list.map((movie)=>{
+          return(
+            <Link to={`/Movie/${movie.movieId}`}>
+            <div className="listItem-div"><h2>{movie.name}</h2>
+            <h3>{movie.genres}</h3>
+            <img src={movie.image} width="150"/></div></Link>
+          )
+        
+        })}
       </main>
     )
 }

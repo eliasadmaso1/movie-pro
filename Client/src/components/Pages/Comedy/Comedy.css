@@ -1,0 +1,44 @@
+.row-posters {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: 30px;
+    
+    
+  }
+  .container {
+    position: relative;
+    width: 100%;
+  }
+  
+  .image {
+    display: block;
+    width: 170px;
+    height: auto;
+  }
+  
+  .overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    transition: .5s ease;
+    background-color:black;
+  }
+  
+  .container:hover .overlay {
+    opacity: 1;
+  }
+  
+  .text {
+    color: white;
+    font-size: 15px;
+    position: absolute;
+    margin-top: 15px;
+    margin-left: 15px;
+    font-display: Impact, fantasy;
+  }
+  

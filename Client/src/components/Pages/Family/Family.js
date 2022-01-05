@@ -1,7 +1,7 @@
 import { useMyContext } from "../../../context";
-import CardComponent from "../../Featurs/Cards/Cards";
 import { useEffect, useState } from "react";
-import { Grid } from "@material-ui/core";
+import './Family.css';
+import {Link} from 'react-router-dom';
 
 export default function FamilyMovies() {
   const { movies } = useMyContext();
@@ -17,21 +17,29 @@ export default function FamilyMovies() {
   }, []);
 
   return (
-    <>
-      <div className="row">
-        <h2>Family Movies</h2>
-        <div className="row-posters">
-          {filtered.map((movie) => {
-            return (
-              <img
-                className="row-poster"
-                src={movie.image.original}
-                width="140"
-              />
-            );
-          })}
-        </div>
-      </div>
-    </>
+    <div className="row">
+    <h2>Action Movies</h2>
+    <div className="row-posters">
+      {filtered.map((movie) => {
+        return (<Link to={`/Movie/${movie.id}`}>
+          <div className="container">
+            <img src={movie.image.original} alt="Avatar" className="image" />
+            <div className="overlay">
+              <div className="text">
+                
+                {movie.name}<br>
+                </br><br></br>
+                {movie.genres[0]}
+                <br></br><br></br>
+                {movie.premiered}
+                <br></br><br></br>
+                {movie.language}
+              </div>
+            </div>
+          </div></Link>
+        );
+      })}
+    </div>
+  </div>
   );
 }

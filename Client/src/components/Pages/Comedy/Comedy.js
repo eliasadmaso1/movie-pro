@@ -1,6 +1,8 @@
 import { useMyContext } from "../../../context";
 import { useEffect, useState } from "react";
 import {Link} from 'react-router-dom';
+import './Comedy.css';
+
 
 export default function ComedyMovies() {
   const { movies } = useMyContext();
@@ -16,19 +18,29 @@ export default function ComedyMovies() {
   }, []);
 
   return (
-    <>
     <div className="row">
-    <h2>Comedy Movies</h2>
+    <h2>Action Movies</h2>
     <div className="row-posters">
-    
-    {filtered.map((movie)=>{
-        return (<><img className="row-poster" src={movie.image.original} width="140"/>
-        <Link to={`/Movie/${movie.id}`}><button>click</button></Link></>)
-
+      {filtered.map((movie) => {
+        return (<Link to={`/Movie/${movie.id}`}>
+          <div className="container">
+            <img src={movie.image.original} alt="Avatar" className="image" />
+            <div className="overlay">
+              <div className="text">
+                
+                {movie.name}<br>
+                </br><br></br>
+                {movie.genres[0]}
+                <br></br><br></br>
+                {movie.premiered}
+                <br></br><br></br>
+                {movie.language}
+              </div>
+            </div>
+          </div></Link>
+        );
       })}
     </div>
-    </div>
-    
-    </>
+  </div>
   );
 }

@@ -6,25 +6,8 @@ import "./Home.css";
 import Footer from "../../Featurs/Footer/Footer";
 
 function Home() {
-  // const [filtered, setFiltered] = useState([]);
-
-  // const changeHandler = (e) => {
-  //   setTimeout(() => {
-  //     const results = movies.filter((res) =>
-  //     res.name.toLowerCase().startsWith(e.target.value)
-  //   );
-  //   setFiltered(results);
-  //   if (e.target.value == "") {
-  //     setFiltered([]);
-  //   }
-
-  //   }, 2000);
-
-  // };
-
-  // const [movies, setMovies] = useState([]);
+  
   const { movies } = useMyContext();
-  console.log(movies);
 
 
 
@@ -32,22 +15,48 @@ function Home() {
 
   return (
     <>
-     <div className="row">
-        <div className="row-posters">
-          {movies.map((movie) => {
-            return (
-              <img
-                className="row-poster-home"
-                src={movie.image.original}
-                width="140"
+    <div className="home">
+      <img src="https://storage.googleapis.com/afs-prod/media/ed5f8b8cba114c7b84e25e9420cafb6d/3000.jpeg" />
+      </div>
+     <div className="slide">
+        <div className="slide-track">
+        
+              <div className="slide">
+              <img className="img-slide"
+                src="https://static.tvmaze.com/uploads/images/original_untouched/75/188991.jpg"
               />
-            );
-          })}
+              </div>
+              <div className="slide">
+              <img className="img-slide"
+                src="https://static.tvmaze.com/uploads/images/original_untouched/1/4601.jpg"
+              />
+              </div>
+              <div className="slide">
+              <img className="img-slide"
+                src="https://static.tvmaze.com/uploads/images/original_untouched/387/969525.jpg"
+              />
+              </div>
+              <div className="slide">
+              <img className="img-slide"
+                src="https://static.tvmaze.com/uploads/images/original_untouched/170/427163.jpg"
+              />
+              </div>
+              <div className="slide">
+              <img className="img-slide"
+                src="https://static.tvmaze.com/uploads/images/original_untouched/2/5349.jpg"
+              />
+              </div>
+              <div className="slide">
+              <img className="img-slide"
+                src="https://static.tvmaze.com/uploads/images/original_untouched/2/5334.jpg"
+              />
+              </div>
+          
         </div>
       </div>
-      {/* <input type="text" onChange={changeHandler} style={{marginLeft:"90%",marginTop:"80px"}} placeholder="Search"/> */}
+      </>
 
-    </>
+   
   );
 }
 

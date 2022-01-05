@@ -1,11 +1,8 @@
 import React from "react";
 import { useParams } from "react-router-dom";
-import { Link } from "react-router-dom";
-import { useMyContext } from "../../../context";
 import { useState, useEffect } from "react";
 import "./movie.css";
-import Button from "../../Featurs/Button/Button";
-import { addToList } from "../../../Service/List-Service";
+import { addToList,deleteFromList } from "../../../Service/List-Service";
 
 function Movie() {
   const { id } = useParams();
@@ -13,13 +10,14 @@ function Movie() {
 
   useEffect(() => {
     fetch("https://api.tvmaze.com/shows?page=1")
-      .then((response) => {
-        return response.json();
-      })
+      .then((response) => response.json())
       .then((data) => {
+        console.log(data);
+        console.log(id);
         const currectMovie = data.find((res) => {
-          return (res.id = id);
+          return res.id == id;
         });
+
         setMovie(currectMovie);
       });
   }, []);
@@ -32,16 +30,16 @@ function Movie() {
             onClick={() => {
               addToList(
                 movie.name,
-                movie.summary,
                 movie.image.original,
-                movie.genres,
-                movie.url
+                movie.genres[0],
+                movie.id
               );
             }}
           >
             Add
           </button>
-          <button>Remove</button>
+          <button
+          onClick={()=>{deleteFromList(movie.id)}}>Remove</button>
         </div>
         <div className="movie-container">
           <h1>Name : {movie.name}</h1>
@@ -58,8 +56,6 @@ function Movie() {
           <h3>Language : {movie.language}</h3>
           <h1>Summary</h1>
           <h3>{movie.summary}</h3>
-          <h3>Country :{movie.webChannel.country.name}</h3>
-          <h3>Web Channel :{movie.webChannel.name}</h3>
         </div>
       </>
     )
