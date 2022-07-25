@@ -2,7 +2,9 @@ import React from "react";
 import { useParams } from "react-router-dom";
 import { useState, useEffect } from "react";
 import "./movie.css";
-import { addToList } from "../../../Service/List-Service";
+import logo from '../../../assets/cinemax.png';
+import {Link} from 'react-router-dom';
+
 
 function Movie() {
   const { id } = useParams();
@@ -22,26 +24,38 @@ function Movie() {
       });
   }, []);
 
+  let length;
+  if(movie){
+    if(movie.summary){
+      length = movie.summary.length
+
+    }
+ 
+  }
+  
+
+ 
+
   return (
     movie && (
       <>
-        <div className="manage-list">
-          <button
-            onClick={() => {
-              addToList(
-                movie.name,
-                movie.image.original,
-                movie.genres[0],
-                movie.id
-              );
-            }}
-          >
-            Add
-          </button>
-        </div>
+      <header className="movie-header">
+      <img src={logo} className="header-logo"/>
+      <span className="movie-header-title">Movie Page</span>
+          <Link to="/movie-pro" style={{marginRight:"2%"}}><span className="back">Back Home</span></Link>
+        
+      </header>
+
         <div className="movie-container">
-          <h1>Name : {movie.name}</h1>
-          <h3>Genre : {movie.genres}</h3>
+
+          <div className="movie-img-container">
+          <img src={movie.image.original} className="movie-img" />
+
+          </div>
+
+          <div className="movie-details">
+          <h2>{movie.name}</h2>
+          <h3>{movie.genres}</h3>
           <h3>
             <a href={movie.url}>Movie Link</a>
           </h3>
@@ -50,10 +64,11 @@ function Movie() {
           </h3>
 
           <h3>Premiered : {movie.premiered}</h3>
-          <img src={movie.image.original} width="350" />
           <h3>Language : {movie.language}</h3>
-          <h1>Summary</h1>
-          <h3>{movie.summary}</h3>
+          <h3>{movie.summary ? movie.summary.slice(3,length-4) : "sd"}</h3>
+          </div>
+
+       
         </div>
       </>
     )

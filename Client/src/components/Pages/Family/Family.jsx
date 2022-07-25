@@ -1,12 +1,12 @@
-import { Link } from "react-router-dom";
+import { useMyContext } from "../../../context";
 import { useEffect, useState } from "react";
-import logo from '../../../assets/cinemax.png';
+import {Link} from 'react-router-dom';
 import '../movies.css';
+import logo from '../../../assets/cinemax.png';
 
 
 
-export default function ActionMovies() {
-
+export default function FamilyMovies() {
 
 
   const [movies, setMovies] = useState([]);
@@ -18,11 +18,12 @@ export default function ActionMovies() {
       })
       .then((data) => {
         const comedyMovies = data.filter((item) => {
-          return item.genres.includes("Action");
+          return item.genres.includes("Family");
         });
         setMovies(comedyMovies);
       });
   }, []);
+
   
 
   return (
@@ -35,7 +36,7 @@ export default function ActionMovies() {
  
 
   <header>
-  <h2>Action Movies</h2>
+  <h2>Family Movies</h2>
 
 
   </header>

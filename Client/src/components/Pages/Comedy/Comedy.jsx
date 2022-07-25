@@ -1,18 +1,9 @@
-import { useMyContext } from "../../../context";
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-import "./Comedy.css";
-import CloseIcon from '@mui/icons-material/Close';
-import MenuIcon from '@mui/icons-material/Menu';
-import logo from '../../../assets/cinemax.png'
+import logo from '../../../assets/cinemax.png';
+import '../movies.css';
 
 export default function ComedyMovies() {
-
-  const [toggle,setToggle] = useState(true);
-
-  const clicked = ()=>{
-      setToggle(prev => !prev);
-  }
 
   const [movies, setMovies] = useState([]);
 
@@ -29,19 +20,18 @@ export default function ComedyMovies() {
       });
   }, []);
 
-  console.log(movies);
 
   return (
     <>
       <header className="header">
           <img src={logo} className="header-logo"/>
-          <Link to="/" style={{marginRight:"2%"}}><span className="back">Back Home</span></Link>
+          <Link to="/movie-pro" style={{marginRight:"2%"}}><span className="back">Back Home</span></Link>
         
       </header>
    
  
     <header>
-    <h2>Action Movies</h2>
+    <h2>Comedy Movies</h2>
 
 
     </header>

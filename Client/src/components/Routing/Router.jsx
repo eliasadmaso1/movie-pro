@@ -1,10 +1,10 @@
 import { Switch, Route } from "react-router-dom";
-import Home from "../Pages/Home/Home";
-import ActionMovies from "../Pages/Action/Action";
-import ComedyMovies from "../Pages/Comedy/Comedy";
-import DramaMovies from "../Pages/Drama/Drama";
-import FamilyMovies from "../Pages/Family/Family";
-import Movie from "../Pages/Movie/movie";
+import Home from "../Pages/Home/Home.jsx";
+import ActionMovies from "../Pages/Action/Action.jsx";
+import ComedyMovies from "../Pages/Comedy/Comedy.jsx";
+import DramaMovies from "../Pages/Drama/Drama.jsx";
+import FamilyMovies from "../Pages/Family/Family.jsx";
+import Movie from "../Pages/Movie/movie.jsx";
 
 export default function RouteComponent() {
   return (
