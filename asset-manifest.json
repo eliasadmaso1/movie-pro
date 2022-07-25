@@ -1,23 +1,23 @@
 {
   "files": {
-    "main.css": "/movie-pro/static/css/main.49e2afd0.chunk.css",
-    "main.js": "/movie-pro/static/js/main.0b511713.chunk.js",
-    "main.js.map": "/movie-pro/static/js/main.0b511713.chunk.js.map",
-    "runtime-main.js": "/movie-pro/static/js/runtime-main.62dca204.js",
-    "runtime-main.js.map": "/movie-pro/static/js/runtime-main.62dca204.js.map",
-    "static/js/2.63a0ee4d.chunk.js": "/movie-pro/static/js/2.63a0ee4d.chunk.js",
-    "static/js/2.63a0ee4d.chunk.js.map": "/movie-pro/static/js/2.63a0ee4d.chunk.js.map",
-    "static/js/3.e6e98213.chunk.js": "/movie-pro/static/js/3.e6e98213.chunk.js",
-    "static/js/3.e6e98213.chunk.js.map": "/movie-pro/static/js/3.e6e98213.chunk.js.map",
+    "main.css": "/movie-pro/static/css/main.e28cfe4a.chunk.css",
+    "main.js": "/movie-pro/static/js/main.ad5f8219.chunk.js",
+    "main.js.map": "/movie-pro/static/js/main.ad5f8219.chunk.js.map",
+    "runtime-main.js": "/movie-pro/static/js/runtime-main.77681e98.js",
+    "runtime-main.js.map": "/movie-pro/static/js/runtime-main.77681e98.js.map",
+    "static/js/2.b896fd9e.chunk.js": "/movie-pro/static/js/2.b896fd9e.chunk.js",
+    "static/js/2.b896fd9e.chunk.js.map": "/movie-pro/static/js/2.b896fd9e.chunk.js.map",
+    "static/js/3.1c7b47c2.chunk.js": "/movie-pro/static/js/3.1c7b47c2.chunk.js",
+    "static/js/3.1c7b47c2.chunk.js.map": "/movie-pro/static/js/3.1c7b47c2.chunk.js.map",
     "index.html": "/movie-pro/index.html",
-    "static/css/main.49e2afd0.chunk.css.map": "/movie-pro/static/css/main.49e2afd0.chunk.css.map",
-    "static/js/2.63a0ee4d.chunk.js.LICENSE.txt": "/movie-pro/static/js/2.63a0ee4d.chunk.js.LICENSE.txt",
-    "static/media/logo.2bc164c1.png": "/movie-pro/static/media/logo.2bc164c1.png"
+    "static/css/main.e28cfe4a.chunk.css.map": "/movie-pro/static/css/main.e28cfe4a.chunk.css.map",
+    "static/js/2.b896fd9e.chunk.js.LICENSE.txt": "/movie-pro/static/js/2.b896fd9e.chunk.js.LICENSE.txt",
+    "static/media/cinemax.be6dc459.png": "/movie-pro/static/media/cinemax.be6dc459.png"
   },
   "entrypoints": [
-    "static/js/runtime-main.62dca204.js",
-    "static/js/2.63a0ee4d.chunk.js",
-    "static/css/main.49e2afd0.chunk.css",
-    "static/js/main.0b511713.chunk.js"
+    "static/js/runtime-main.77681e98.js",
+    "static/js/2.b896fd9e.chunk.js",
+    "static/css/main.e28cfe4a.chunk.css",
+    "static/js/main.ad5f8219.chunk.js"
   ]
 }
