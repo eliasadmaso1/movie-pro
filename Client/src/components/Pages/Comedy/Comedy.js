@@ -1,46 +1,74 @@
 import { useMyContext } from "../../../context";
 import { useEffect, useState } from "react";
-import {Link} from 'react-router-dom';
-import './Comedy.css';
-
+import { Link } from "react-router-dom";
+import "./Comedy.css";
+import CloseIcon from '@mui/icons-material/Close';
+import MenuIcon from '@mui/icons-material/Menu';
+import logo from '../../../assets/cinemax.png'
 
 export default function ComedyMovies() {
-  const { movies } = useMyContext();
-  const [filtered, setFiltered] = useState([]);
+
+  const [toggle,setToggle] = useState(true);
+
+  const clicked = ()=>{
+      setToggle(prev => !prev);
+  }
+
+  const [movies, setMovies] = useState([]);
 
   useEffect(() => {
-    console.log(movies);
-    const results = movies.filter((res) => {
-      return res.genres.includes("Comedy");
-    });
-
-    setFiltered(results);
+    fetch("https://api.tvmaze.com/shows?page=1")
+      .then((response) => {
+        return response.json();
+      })
+      .then((data) => {
+        const comedyMovies = data.filter((item) => {
+          return item.genres.includes("Comedy");
+        });
+        setMovies(comedyMovies);
+      });
   }, []);
 
+  console.log(movies);
+
   return (
-    <div className="row">
+    <>
+      <header className="header">
+          <img src={logo} className="header-logo"/>
+          <Link to="/" style={{marginRight:"2%"}}><span className="back">Back Home</span></Link>
+        
+      </header>
+   
+ 
+    <header>
     <h2>Action Movies</h2>
-    <div className="row-posters">
-      {filtered.map((movie) => {
-        return (<Link to={`/Movie/${movie.id}`}>
-          <div className="container">
-            <img src={movie.image.original} alt="Avatar" className="image" />
-            <div className="overlay">
-              <div className="text">
-                
-                {movie.name}<br>
-                </br><br></br>
-                {movie.genres[0]}
-                <br></br><br></br>
-                {movie.premiered}
-                <br></br><br></br>
-                {movie.language}
+
+
+    </header>
+      <div className="row-posters">
+        {movies.map((movie) => {
+          return (
+            <Link to={`/Movie/${movie.id}`}>
+              <div className="container">
+                <img
+                  src={movie.image.original}
+                  alt="Avatar"
+                  className="image"
+                />
+                <div className="overlay">
+                  <div className="text">
+                    <span>{movie.name.slice(0,13)}</span>
+                    <span>{movie.genres[0]}</span>
+                    <span>    {movie.language}</span>
+
+              
+                  </div>
+                </div>
               </div>
-            </div>
-          </div></Link>
-        );
-      })}
-    </div>
-  </div>
+            </Link>
+          );
+        })}
+      </div>
+    </>
   );
 }

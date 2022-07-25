@@ -1,6 +1,5 @@
 import { useMyContext } from "../../../context";
 import { useEffect, useState } from "react";
-import './Drama.css';
 import {Link} from 'react-router-dom';
 
 export default function DramaMovies() {

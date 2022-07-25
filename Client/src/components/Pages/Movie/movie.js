@@ -2,7 +2,7 @@ import React from "react";
 import { useParams } from "react-router-dom";
 import { useState, useEffect } from "react";
 import "./movie.css";
-import { addToList,deleteFromList } from "../../../Service/List-Service";
+import { addToList } from "../../../Service/List-Service";
 
 function Movie() {
   const { id } = useParams();
@@ -38,8 +38,6 @@ function Movie() {
           >
             Add
           </button>
-          <button
-          onClick={()=>{deleteFromList(movie.id)}}>Remove</button>
         </div>
         <div className="movie-container">
           <h1>Name : {movie.name}</h1>

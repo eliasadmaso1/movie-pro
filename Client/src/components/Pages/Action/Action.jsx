@@ -2,7 +2,6 @@ import { useMyContext } from "../../../context";
 import { Grid, MuiThemeProvider } from "@material-ui/core";
 import { Link } from "react-router-dom";
 import { useEffect, useState } from "react";
-import "./Action.css";
 
 export default function ActionMovies() {
   const { movies, Favorites } = useMyContext();
